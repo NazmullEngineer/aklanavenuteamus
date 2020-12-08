@@ -90,8 +90,8 @@ class Data extends React.Component {
         <form onSubmit={this.submit}>
           <div className="form-input">
             <input 
-              type="name"
-              name="name"
+              type="text"
+              name="title"
               placeholder="Your Name"
               value={this.state.title}
               onChange={this.handleChange}
@@ -101,8 +101,8 @@ class Data extends React.Component {
             <textarea
               placeholder="Your Message"
               name="body"
-              cols="20"
-              rows="5"
+              cols="30"
+              rows="10"
               value={this.state.body}
               onChange={this.handleChange}
             >
