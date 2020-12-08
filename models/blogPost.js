@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 // Schema
 const Schema = mongoose.Schema;
 const BlogPostSchema = new Schema({
-    title: String,
+    name: String,
     body: String,
     date: {
         type: String,
