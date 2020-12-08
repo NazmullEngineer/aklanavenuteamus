@@ -7,7 +7,7 @@ import '../App.css';
 class Data extends React.Component {
 
   state = {
-    title: '',
+    name: '',
     body: '',
     posts: []
   };
@@ -39,7 +39,7 @@ class Data extends React.Component {
     event.preventDefault();
 
     const payload = {
-      title: this.state.title,
+      name: this.state.name,
       body: this.state.body
     };
 
@@ -61,7 +61,7 @@ class Data extends React.Component {
 
   resetUserInputs = () => {
     this.setState({
-      title: '',
+      name: '',
       body: ''
     });
   };
@@ -73,7 +73,7 @@ class Data extends React.Component {
 
     return posts.map((post, index) => (
       <div key={index} className="blog-post__display">
-        <h3>{post.title}</h3>
+        <h3>{post.name}</h3>
         <p>{post.body}</p>
       </div>
     ));
@@ -90,10 +90,10 @@ class Data extends React.Component {
         <form onSubmit={this.submit}>
           <div className="form-input">
             <input 
-              type="text"
-              name="title"
+              type="name"
+              name="name"
               placeholder="Your Name"
-              value={this.state.title}
+              value={this.state.name}
               onChange={this.handleChange}
             />
           </div>
@@ -101,8 +101,8 @@ class Data extends React.Component {
             <textarea
               placeholder="Your Message"
               name="body"
-              cols="30"
-              rows="10"
+              cols="5"
+              rows="5"
               value={this.state.body}
               onChange={this.handleChange}
             >
